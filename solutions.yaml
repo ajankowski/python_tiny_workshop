@@ -1,0 +1,8 @@
+#below will translate to python dictionary using pyyaml
+#multi line is created by adding blank line and spaces before next line
+
+e110:
+    hint: "input('...')
+        \ndon't forget to convert str into int"
+    solution: "n = int(input('enter any number: '))
+        \nprint(n*3)"

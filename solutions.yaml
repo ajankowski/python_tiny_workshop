@@ -2,7 +2,42 @@
 #multi line is created by adding blank line and spaces before next line
 
 e110:
-    hint: "input('...')
-        \ndon't forget to convert str into int"
-    solution: "n = int(input('enter any number: '))
-        \nprint(n*3)"
+    hint: |
+        input('...')
+        don't forget to convert str into int
+    solution: |
+            n = int(input('enter any number: '))
+            print(n*3)"
+
+
+e280:
+    hint: |
+        think more
+    solution: |
+        while True: 
+            cows = 0 
+            bulls = 0 
+            zgadywanie = input('podaj czterocyfrowy numer:  ')
+
+            if zgadywanie == 'q': 
+                print('dziękuję za grę') 
+                break
+
+            for i in range(len(zgadywanie)):
+
+                if zgadywanie[i] not in do_odgadniecia: 
+                    continue
+                    
+                elif zgadywanie[i] == do_odgadniecia[i]: 
+                    bulls += 1 
+                    if bulls == 4:
+                        print('proby', ilosc_prob) 
+                        print('wygrałeś') 
+                        break
+                        
+                elif zgadywanie[i] in do_odgadniecia: 
+                    cows += 1 
+                    
+            ilosc_prob += 1
+            print('bulls: ', bulls) 
+            print('cows: ', cows)

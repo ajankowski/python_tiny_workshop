@@ -66,7 +66,7 @@ e180:
       don't forget to convert str into int
   solution: |
     brand = input('What brand is your car?\n')
-    
+
     if brand == 'Volkswagen':
         print('Your car is made in Germany')
         
@@ -197,7 +197,8 @@ e240:
   hint: |
       input('...')
       don't forget to convert str into int
-  solution: "brand = input('What brand is your car?\\n')\n"
+  solution: |
+      not done
 e280: 
   hint: "think more\n"
   solution: |

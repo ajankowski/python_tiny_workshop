@@ -1,5 +1,64 @@
-#below will translate to python dictionary using pyyaml
-#multi line is created by adding blank line and spaces before next line
+﻿--- 
+e110: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      n = int(input('enter any number: '))
+      print(n*3)"
+e120: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      name = input('Please enter your name:')
+      age = int(input('Please enter your age:'))
+      year = (100 - age) + 2020
+      print(name + ' will be 100 years old in ' + str(year) )
+e130: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      word1 = input('Please enter first word:')
+      word2 = input('Please enter second word:')
+      print(word1 + word2)
+e140: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      filename = input('Please enter a filename')
+      elements = filename.split('.')
+      print(elements)
+e150: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      to_do_list = ['buy milk','clean car','walk the dog','cook lunch']
+      print(to_do_list[2])
+e160: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      shopping_list = [ ['apples','pears','bananas'], [10, 12, 14] ]
+      total = shopping_list[1][0] + shopping_list[1][1] + shopping_list[1][2]
+      print(total)
+e170: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      import requests
+      response = requests.get('http://api.nbp.pl/api/exchangerates/rates/a/usd/')
+      data = response.json()
+      print(data['code'])
+      currency_info = data['rates']
+      tmp = currency_info[0]
+      print(tmp['effectiveDate'])
+      print(tmp['mid'])
 
 e180: 
   hint: |

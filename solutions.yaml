@@ -41,3 +41,4 @@ e280:
             ilosc_prob += 1
             print('bulls: ', bulls) 
             print('cows: ', cows)
+            HALLO

@@ -1,44 +1,171 @@
 #below will translate to python dictionary using pyyaml
 #multi line is created by adding blank line and spaces before next line
 
-e110:
-    hint: |
-        input('...')
-        don't forget to convert str into int
-    solution: |
-            n = int(input('enter any number: '))
-            print(n*3)"
+e180: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+brand = input('What brand is your car?\n')
 
-
-e280:
-    hint: |
-        think more
-    solution: |
-        while True: 
-            cows = 0 
-            bulls = 0 
-            zgadywanie = input('podaj czterocyfrowy numer:  ')
-
-            if zgadywanie == 'q': 
-                print('dziękuję za grę') 
-                break
-
-            for i in range(len(zgadywanie)):
-
-                if zgadywanie[i] not in do_odgadniecia: 
-                    continue
-                    
-                elif zgadywanie[i] == do_odgadniecia[i]: 
-                    bulls += 1 
-                    if bulls == 4:
-                        print('proby', ilosc_prob) 
-                        print('wygrałeś') 
-                        break
-                        
-                elif zgadywanie[i] in do_odgadniecia: 
-                    cows += 1 
-                    
-            ilosc_prob += 1
-            print('bulls: ', bulls) 
-            print('cows: ', cows)
-            HALLO
+if brand == 'Volkswagen':
+    print('Your car is made in Germany')
+    
+elif brand == 'Toyota':
+    print('Your car is made in Japan')
+    
+elif brand == 'Volvo':
+    print('Your car is made in Sweden...mmm or maybe in China?')
+    
+elif brand == 'BMW':
+    print('Your car is made in Germany')
+    
+elif brand == 'Mercedes':
+    print('Your car is made in Germany')
+    
+elif brand == 'Audi':
+    print('Your car is made in Germany')
+    
+elif brand == 'Opel':
+    print('Your car is made in Germany')
+    
+elif brand == 'Renault':
+    print('Your car is made in France')
+    
+elif brand == 'Honda':
+    print('Your car is made in Japan')
+    
+elif brand == 'Alfa Romeo':
+    print('Your car is made in Italy')
+    
+else:
+    print('I have no information about your car')
+e190: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      import requests
+      response = requests.get('https://api.chucknorris.io/jokes/random')
+      data = response.json()
+      
+      joke = data['value']
+      word_in_joke = input('Please enter the word we are looking for in the Chuck Norris joke\n')
+      
+      def look_for_word(word_in_joke, joke):
+        if(joke.find(word_in_joke) != -1):
+          return 1
+        else:
+          return 0
+      
+      is_joke_found = look_for_word(word_in_joke, joke)
+      
+      if(is_joke_found == 1):
+        print ("\nThe joke contains the word you entered") 
+      else: 
+        print ("\nThe joke doesn't contain the word you entered") 
+      
+      print("\n and the joke is....\n")
+      print(joke)
+e200: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      def weather(city):
+      if(city == 'Warsaw'):
+        print('Today in Warsaw it is raining')
+      elif(city == 'Gdansk'):
+        print('Today in Gdansk it is sunny')
+      elif(city == 'Krakow'):
+        print('Today in Krakow it is snowing')
+      elif(city == 'Poznan'): 
+        print('Today in Poznan it is windy')
+      else:
+        print('The city you entered cannot be found')
+      city = input('Please enter the name of a city')
+      weather(city)
+e210: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      import random
+      result=[]
+      for roll_dice in range(2):
+        result.append(random.randint(1,6))
+      print("Rolling the dice first time: " + str(result[0]) )
+      print("\nRolling the dice second time: " + str(result[1]) )
+e220: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      import math
+      def area_of_a_circle(diameter):
+         if(diameter < 0):
+           return -1
+         else:
+          area = math.pi*(diameter*diameter)
+          return area
+      diameter = input('Please input the diameter of a circle: \n')
+      area = area_of_a_circle(int(diameter))
+      
+      if (area != -1):
+        print("The area of the circle with diameter " + diameter + " is : " + str(area))
+      else: 
+        print("The diameter cannot be a negative value")
+e230: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: |
+      print('blad')
+      def pizza(skladnik):
+        text = "dzisiaj pizza z "
+        text = text + skladnik
+        return text
+      pizza("salami")
+      def szczekaj():
+       return 'hau, hau'
+      def dzielenie(a, b):
+       if (b==0):
+         return 'We cannot divide by zero'
+       else:
+         return a/b
+      dzielenie(4, 2)
+e240: 
+  hint: |
+      input('...')
+      don't forget to convert str into int
+  solution: "brand = input('What brand is your car?\\n')\n"
+e280: 
+  hint: "think more\n"
+  solution: |
+      while True: 
+          cows = 0 
+          bulls = 0 
+          zgadywanie = input('podaj czterocyfrowy numer:  ')
+      
+          if zgadywanie == 'q': 
+              print('dziękuję za grę') 
+              break
+      
+          for i in range(len(zgadywanie)):
+      
+              if zgadywanie[i] not in do_odgadniecia: 
+                  continue
+                  
+              elif zgadywanie[i] == do_odgadniecia[i]: 
+                  bulls += 1 
+                  if bulls == 4:
+                      print('proby', ilosc_prob) 
+                      print('wygrałeś') 
+                      break
+                      
+              elif zgadywanie[i] in do_odgadniecia: 
+                  cows += 1 
+                  
+          ilosc_prob += 1
+          print('bulls: ', bulls) 
+          print('cows: ', cows)

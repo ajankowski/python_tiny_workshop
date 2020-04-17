@@ -65,40 +65,40 @@ e180:
       input('...')
       don't forget to convert str into int
   solution: |
-brand = input('What brand is your car?\n')
-
-if brand == 'Volkswagen':
-    print('Your car is made in Germany')
+    brand = input('What brand is your car?\n')
     
-elif brand == 'Toyota':
-    print('Your car is made in Japan')
-    
-elif brand == 'Volvo':
-    print('Your car is made in Sweden...mmm or maybe in China?')
-    
-elif brand == 'BMW':
-    print('Your car is made in Germany')
-    
-elif brand == 'Mercedes':
-    print('Your car is made in Germany')
-    
-elif brand == 'Audi':
-    print('Your car is made in Germany')
-    
-elif brand == 'Opel':
-    print('Your car is made in Germany')
-    
-elif brand == 'Renault':
-    print('Your car is made in France')
-    
-elif brand == 'Honda':
-    print('Your car is made in Japan')
-    
-elif brand == 'Alfa Romeo':
-    print('Your car is made in Italy')
-    
-else:
-    print('I have no information about your car')
+    if brand == 'Volkswagen':
+        print('Your car is made in Germany')
+        
+    elif brand == 'Toyota':
+        print('Your car is made in Japan')
+        
+    elif brand == 'Volvo':
+        print('Your car is made in Sweden...mmm or maybe in China?')
+        
+    elif brand == 'BMW':
+        print('Your car is made in Germany')
+        
+    elif brand == 'Mercedes':
+        print('Your car is made in Germany')
+        
+    elif brand == 'Audi':
+        print('Your car is made in Germany')
+        
+    elif brand == 'Opel':
+        print('Your car is made in Germany')
+        
+    elif brand == 'Renault':
+        print('Your car is made in France')
+        
+    elif brand == 'Honda':
+        print('Your car is made in Japan')
+        
+    elif brand == 'Alfa Romeo':
+        print('Your car is made in Italy')
+        
+    else:
+        print('I have no information about your car')
 e190: 
   hint: |
       input('...')

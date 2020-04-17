@@ -5,7 +5,9 @@ e110:
       don't forget to convert str into int
   solution: |
       n = int(input('enter any number: '))
-      print(n*3)"
+      print(n*3)
+  arguments: |
+      [3]
 e120: 
   hint: |
       input('...')
@@ -67,34 +69,34 @@ e180:
   solution: |
     brand = input('What brand is your car?\n')
 
-    if brand == 'Volkswagen':
+    if brand.capitalize() == 'Volkswagen':
         print('Your car is made in Germany')
         
-    elif brand == 'Toyota':
+    elif brand.capitalize() == 'Toyota':
         print('Your car is made in Japan')
         
-    elif brand == 'Volvo':
+    elif brand.capitalize() == 'Volvo':
         print('Your car is made in Sweden...mmm or maybe in China?')
         
-    elif brand == 'BMW':
+    elif brand.upper() == 'BMW':
         print('Your car is made in Germany')
         
-    elif brand == 'Mercedes':
+    elif brand.capitalize() == 'Mercedes':
         print('Your car is made in Germany')
         
-    elif brand == 'Audi':
+    elif brand.capitalize() == 'Audi':
         print('Your car is made in Germany')
         
-    elif brand == 'Opel':
+    elif brand.capitalize() == 'Opel':
         print('Your car is made in Germany')
         
-    elif brand == 'Renault':
+    elif brand.capitalize() == 'Renault':
         print('Your car is made in France')
         
-    elif brand == 'Honda':
+    elif brand.capitalize() == 'Honda':
         print('Your car is made in Japan')
         
-    elif brand == 'Alfa Romeo':
+    elif brand.capitalize() == 'Alfa Romeo':
         print('Your car is made in Italy')
         
     else:
@@ -105,44 +107,31 @@ e190:
       don't forget to convert str into int
   solution: |
       import requests
-      response = requests.get('https://api.chucknorris.io/jokes/random')
+      word = input('Please enter the word we are looking for in the Chuck Norris joke\n')
+      api = 'https://api.chucknorris.io/jokes/search?query='+word
+      response = requests.get(api)
       data = response.json()
-      
-      joke = data['value']
-      word_in_joke = input('Please enter the word we are looking for in the Chuck Norris joke\n')
-      
-      def look_for_word(word_in_joke, joke):
-        if(joke.find(word_in_joke) != -1):
-          return 1
-        else:
-          return 0
-      
-      is_joke_found = look_for_word(word_in_joke, joke)
-      
-      if(is_joke_found == 1):
-        print ("\nThe joke contains the word you entered") 
-      else: 
-        print ("\nThe joke doesn't contain the word you entered") 
-      
-      print("\n and the joke is....\n")
-      print(joke)
+      if data['result']:
+        print(data['result'][0]['value'])
+      else:
+        print(f'no jokes with {word}')
 e200: 
   hint: |
       input('...')
       don't forget to convert str into int
   solution: |
       def weather(city):
-      if(city == 'Warsaw'):
-        print('Today in Warsaw it is raining')
-      elif(city == 'Gdansk'):
-        print('Today in Gdansk it is sunny')
-      elif(city == 'Krakow'):
-        print('Today in Krakow it is snowing')
-      elif(city == 'Poznan'): 
-        print('Today in Poznan it is windy')
-      else:
-        print('The city you entered cannot be found')
-      city = input('Please enter the name of a city')
+        if (city.capitalize() == 'Warszawa'):
+          print('Today in Warszawa it is raining')
+        elif (city.capitalize() == 'Gdansk'):
+          print('Today in Gdansk it is sunny')
+        elif (city.capitalize() == 'Krakow'):
+          print('Today in Krakow it is snowing')
+        elif (city.capitalize() == 'Poznan'): 
+          print('Today in Poznan it is windy')
+        else:
+          print('The city you entered cannot be found')
+      city = input('Please enter the name of a city:    ')
       weather(city)
 e210: 
   hint: |
@@ -198,7 +187,7 @@ e240:
       input('...')
       don't forget to convert str into int
   solution: |
-      not done
+      pass
 e280: 
   hint: "think more\n"
   solution: |

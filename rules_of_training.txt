@@ -1,0 +1,36 @@
+we are working using jupyter notebook
+
+there are 3 ways to do it:
+- local (requires installation)
+- own cloud (requires expensive hw)
+- google colab (requires google account)
+
+today you have 2 options:
+- 167.172.36.73
+- google colab
+
+support:
+- we have separate google meet channel for support
+- rise your hand
+- put question in chat box
+- put '...' in chat box and you get an option to ask question
+
+communication:
+- chat window is your main channel
+- i will ask questions and expect you to put answers in chat
+
+please, please speak up
+- don't worry you don't know, i still to do a training without making mistakes
+- i cannot see you
+- it is close to impossible to know how im doing, 
+
+evaluation:
+- super important
+- we will have more sessions, you do evaluation for yourself
+- if enough of you vote for it i will add additionl programming session :-)
+
+what is the purpose of the session:
+- we will open a bonnet of a car called AI
+- to understand what's there, you need to recognize what you see
+- it won't teach you enough programming to be dangerous, but hopefully can hook you up
+

@@ -3,7 +3,7 @@ import yaml
 file = open("solutions.yaml", 'rt', encoding='utf-8')
 solutions_file = yaml.load(file)
 
-def hint(exercise, solution=0):
+def hint(exercise, solution=1):
     global solutions_file
     e = solutions_file[exercise]
     if solution:
